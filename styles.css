@@ -1,0 +1,555 @@
+/* Posicionamento da logo com texto */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espaço entre logo e texto */
+}
+
+/* Ajuste do tamanho da imagem */
+.logo-img {
+  height: 42px;        /* ajuste conforme o visual desejado */
+  width: auto;
+}
+
+/* --------- RESET SIMPLES --------- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f4f6fb;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* --------- CORES PRINCIPAIS --------- */
+:root {
+  --azul: #00439b;
+  --azul-escuro: #002a5c;
+  --laranja: #f26a1b;
+  --cinza-bg: #f3f4f6;
+  --texto: #222;
+}
+
+/* --------- TOPO / MENU --------- */
+
+.topo {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #ffffffcc;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid #e3e6ee;
+}
+
+.topo-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+
+.logo-fox {
+  color: var(--laranja);
+}
+
+.logo-viagens {
+  color: var(--azul);
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #444;
+  font-size: 0.95rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--laranja);
+  transition: width 0.25s;
+}
+
+.menu a:hover {
+  color: var(--azul);
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* --------- HERO --------- */
+/* HERO - estrutura lado a lado */
+.hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px; /* espaço entre logo e texto */
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Ajuste da logo grande */
+.hero-logo img {
+  height: 180px;  /* ajuste conforme preferir */
+  width: auto;
+}
+
+/* Ajustes do texto */
+.hero-text {
+  text-align: left;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  color: white;
+  font-size: 20px;
+}
+
+
+.hero {
+  background: linear-gradient(135deg, var(--azul), #0066cc);
+  color: #fff;
+  padding: 80px 20px 120px;
+  position: relative;
+}
+
+.hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  margin-bottom: 16px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+.hero-wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 60px;
+  background: radial-gradient(
+      circle at 20% 0,
+      transparent 40px,
+      #f4f6fb 40px
+    ),
+    radial-gradient(circle at 80% 0, transparent 40px, #f4f6fb 40px);
+}
+
+/* --------- SEÇÕES GENÉRICAS --------- */
+
+.secao {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.secao h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  position: relative;
+  color: var(--azul-escuro);
+}
+
+.secao h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: var(--laranja);
+  margin: 10px auto 0;
+}
+
+/* --------- FROTA --------- */
+
+.secao-frota {
+  background: #fff;
+  border-radius: 20px;
+  margin-top: -40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* Grade da frota: 2 colunas no desktop, 1 no mobile */
+.frota-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr)); /* 2 colunas */
+  gap: 24px;
+}
+
+/* Cada card da frota */
+.frota-card {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Imagens alinhadas */
+.frota-imagem img {
+  width: 100%;
+  height: 220px;        /* força todas a mesma altura */
+  object-fit: cover;    /* “corta” a imagem sem distorcer */
+  display: block;
+}
+
+/* Responsivo: 1 coluna no mobile */
+@media (max-width: 768px) {
+  .frota-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+.frota-imagem a:hover img {
+  transform: scale(1.03);
+}
+
+.frota-info {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.frota-info h3 {
+  font-size: 1.1rem;
+  color: var(--azul-escuro);
+}
+
+.frota-info p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* BOTÕES */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  padding: 10px 16px;
+  border: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.btn-pdf {
+  margin-top: 8px;
+  align-self: flex-start;
+  background: var(--laranja);
+  color: #fff;
+}
+
+.btn-pdf:hover {
+  background: #d75b12;
+}
+
+.btn-enviar {
+  width: 100%;
+  background: var(--laranja);
+  color: #fff;
+}
+
+.btn-enviar:hover {
+  background: #d75b12;
+}
+
+/* --------- QUEM SOMOS --------- */
+
+.secao-quem {
+  margin-top: 30px;
+}
+
+.quem-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.quem-historia h3,
+.quem-mvv h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.quem-historia p {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.quem-numeros {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 16px;
+}
+
+.quem-numeros .numero {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--azul);
+}
+
+.quem-numeros .label {
+  display: block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #666;
+}
+
+.quem-mvv {
+  position: relative;
+  background: #f7f9ff;
+  border-radius: 18px;
+  padding: 24px 22px 20px;
+  border: 1px solid #dde3f5;
+}
+
+.quote-icon {
+  position: absolute;
+  top: -18px;
+  left: 20px;
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  background: var(--laranja);
+  color: #fff;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mvv-bloco {
+  margin-bottom: 14px;
+}
+
+.mvv-bloco ul {
+  list-style: none;
+  margin-top: 6px;
+}
+
+.mvv-bloco li {
+  font-size: 0.95rem;
+  color: #444;
+  margin-bottom: 4px;
+}
+
+/* --------- CONTATO --------- */
+
+.secao-contato {
+  margin-top: 20px;
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 2fr);
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contato-info h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 4px;
+}
+
+.contato-info p {
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.contato-bloco {
+  margin-top: 16px;
+}
+
+.contato-bloco h4 {
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--azul-escuro);
+  margin-bottom: 4px;
+}
+
+.contato-form h3 {
+  color: var(--azul-escuro);
+  margin-bottom: 10px;
+}
+
+.contato-form form {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 18px 18px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e1e5f0;
+}
+
+.contato-form label {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.contato-form input,
+.contato-form textarea {
+  width: 100%;
+  margin-top: 4px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #cfd5e6;
+  font: inherit;
+}
+
+.contato-form textarea {
+  resize: vertical;
+}
+
+/* --------- RODAPÉ --------- */
+
+.rodape {
+  margin-top: 40px;
+  background: #050608;
+  color: #ddd;
+  padding: 40px 20px 20px;
+}
+
+.rodape-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.rodape h4 {
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.rodape p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+.rodape ul {
+  list-style: none;
+}
+
+.rodape li {
+  margin-bottom: 4px;
+}
+
+.rodape a {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.rodape a:hover {
+  color: var(--laranja);
+}
+
+.rodape-bottom {
+  max-width: 1100px;
+  margin: 20px auto 0;
+  border-top: 1px solid #333;
+  padding-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #aaa;
+}
+
+/* --------- RESPONSIVO --------- */
+
+@media (max-width: 768px) {
+  .topo-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .menu {
+    gap: 12px;
+  }
+
+  .quem-grid,
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .secao-frota {
+    margin-top: -20px;
+  }
+
+  .rodape-bottom {
+    flex-direction: column;
+    gap: 4px;
+    text-align: center;
+  }
+
+  @media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-logo img {
+    height: 140px;
+  }
+}
+
+}
