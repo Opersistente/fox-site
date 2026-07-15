@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 
@@ -34,13 +33,16 @@ export function Hero() {
       className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy-950"
     >
       <motion.div style={{ y }} className="absolute inset-x-0 -top-20 -bottom-20">
-        <Image
-          src="/images/frota/executivo-46-01.jpg"
-          alt="Ônibus executivo Fox Viagens"
-          fill
-          priority
-          sizes="100vw"
-          className="object-cover object-center opacity-70"
+        <video
+          className="absolute inset-0 h-full w-full object-cover object-center opacity-70"
+          src="/videos/hero.mp4"
+          poster="/images/frota/executivo-46-01.jpg"
+          autoPlay={!shouldReduceMotion}
+          loop
+          muted
+          playsInline
+          preload="auto"
+          aria-hidden="true"
         />
       </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/40" />
