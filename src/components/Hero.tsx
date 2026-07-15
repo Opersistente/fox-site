@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useRef } from "react";
+import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
 
 const WHATSAPP_URL =
   "https://wa.me/554799560826?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20de%20viagem.";
@@ -12,16 +16,33 @@ const TRUST_ITEMS = [
 ];
 
 export function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+  const shouldReduceMotion = useReducedMotion();
+
+  // Efeito parallax: a imagem se move mais devagar que o scroll enquanto o
+  // usuário rola pelo hero, criando sensação de profundidade.
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+  const y = useTransform(scrollYProgress, [0, 1], shouldReduceMotion ? [0, 0] : [0, 140]);
+
   return (
-    <section id="inicio" className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy-950">
-      <Image
-        src="/images/frota/executivo-46-01.jpg"
-        alt="Ônibus executivo Fox Viagens"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center opacity-70"
-      />
+    <section
+      ref={sectionRef}
+      id="inicio"
+      className="relative flex min-h-[100svh] items-center overflow-hidden bg-navy-950"
+    >
+      <motion.div style={{ y }} className="absolute inset-x-0 -top-20 -bottom-20">
+        <Image
+          src="/images/frota/executivo-46-01.jpg"
+          alt="Ônibus executivo Fox Viagens"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center opacity-70"
+        />
+      </motion.div>
       <div className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/70 to-navy-950/40" />
       <div className="absolute inset-0 bg-gradient-to-r from-navy-950/90 via-navy-950/40 to-transparent" />
 
