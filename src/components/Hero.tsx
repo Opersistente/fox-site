@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "motion/react";
+import { ShinyLink } from "./ui/shiny-button";
 
 const WHATSAPP_URL =
   "https://wa.me/554799560826?text=Ol%C3%A1!%20Quero%20solicitar%20um%20or%C3%A7amento%20de%20viagem.";
@@ -71,12 +72,9 @@ export function Hero() {
             className="animate-fade-up mt-9 flex flex-col gap-3 sm:flex-row"
             style={{ animationDelay: "0.15s" }}
           >
-            <a
-              href="/contato"
-              className="rounded-full bg-amber-500 px-7 py-3.5 text-center text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition-transform hover:scale-[1.03] hover:bg-amber-400"
-            >
+            <ShinyLink href="/contato" className="px-7 py-3.5">
               Solicitar Orçamento
-            </a>
+            </ShinyLink>
             <a
               href={WHATSAPP_URL}
               target="_blank"

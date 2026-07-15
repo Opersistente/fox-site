@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import { ShinyLink } from "./ui/shiny-button";
 
 const CORPORATE_ITEMS = [
   "Convenções e feiras",
@@ -74,14 +75,12 @@ function Panel({
         </ul>
       </div>
 
-      <a
+      <ShinyLink
         href={ctaHref}
-        className={`mt-8 inline-block w-fit rounded-full px-6 py-3 text-sm font-semibold transition-transform hover:scale-[1.03] ${
-          isAmber ? "bg-navy-950 text-white" : "bg-amber-500 text-navy-950"
-        }`}
+        className={`mt-8 px-6 py-3 ${isAmber ? "bg-navy-950 shadow-black/20 hover:shadow-black/30" : ""}`}
       >
         {ctaLabel}
-      </a>
+      </ShinyLink>
     </div>
   );
 }

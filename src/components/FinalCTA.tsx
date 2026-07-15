@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Reveal } from "./Reveal";
+import { ShinyLink } from "./ui/shiny-button";
 import { buildWhatsAppUrl } from "@/lib/site";
 
 const WHATSAPP_URL = buildWhatsAppUrl(
@@ -27,12 +28,9 @@ export function FinalCTA() {
           anos transporta pessoas com segurança, conforto e confiança.
         </p>
         <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-          <a
-            href="/contato"
-            className="rounded-full bg-amber-500 px-7 py-3.5 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition-transform hover:scale-[1.03] hover:bg-amber-400"
-          >
+          <ShinyLink href="/contato" className="px-7 py-3.5">
             Falar com um especialista
-          </a>
+          </ShinyLink>
           <a
             href={WHATSAPP_URL}
             target="_blank"

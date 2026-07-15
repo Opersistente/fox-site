@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { ShieldCheck, GraduationCap, FileCheck2, HeartHandshake } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { ShinyLink } from "@/components/ui/shiny-button";
 import { buildWhatsAppUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -87,14 +88,14 @@ export default function TurismoEscolarPage() {
             Fale com nossa equipe e receba uma proposta com o veículo ideal para o número
             de alunos, o roteiro e a data da viagem.
           </p>
-          <a
+          <ShinyLink
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-8 inline-block rounded-full bg-navy-950 px-8 py-3.5 text-sm font-semibold text-white shadow-lg transition-transform hover:scale-[1.03]"
+            className="mt-8 bg-navy-950 px-8 py-3.5 shadow-black/20 hover:shadow-black/30"
           >
             Solicitar proposta escolar
-          </a>
+          </ShinyLink>
         </div>
       </section>
     </>

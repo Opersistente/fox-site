@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import { Logo } from "./Logo";
+import { ShinyLink } from "./ui/shiny-button";
 
 const LINKS = [
   { href: "/", label: "Home" },
@@ -70,12 +71,9 @@ export function Header() {
         </nav>
 
         <div className="hidden items-center gap-3 xl:flex">
-          <Link
-            href="/contato"
-            className="rounded-full bg-amber-500 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition-transform hover:scale-[1.03] hover:bg-amber-400"
-          >
+          <ShinyLink href="/contato" className="px-5 py-2.5 text-sm shadow-sm">
             Solicitar Orçamento
-          </Link>
+          </ShinyLink>
         </div>
 
         <button
@@ -110,13 +108,9 @@ export function Header() {
                 {link.label}
               </Link>
             ))}
-            <Link
-              href="/contato"
-              onClick={() => setOpen(false)}
-              className="mt-2 rounded-full bg-amber-500 px-5 py-3 text-center text-sm font-semibold text-white"
-            >
+            <ShinyLink href="/contato" onClick={() => setOpen(false)} className="mt-2 px-5 py-3">
               Solicitar Orçamento
-            </Link>
+            </ShinyLink>
           </nav>
         </div>
       )}

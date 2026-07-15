@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Users, Presentation, Store, UsersRound, PartyPopper, ShieldCheck } from "lucide-react";
 import { PageHeader } from "@/components/PageHeader";
+import { ShinyLink } from "@/components/ui/shiny-button";
 import { buildWhatsAppUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -74,14 +75,9 @@ export default function EmpresasPage() {
             ))}
           </ul>
 
-          <a
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="mt-10 inline-block rounded-full bg-amber-500 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-amber-500/20 transition-transform hover:scale-[1.03] hover:bg-amber-400"
-          >
+          <ShinyLink href={whatsappHref} target="_blank" rel="noopener noreferrer" className="mt-10 px-8 py-3.5">
             Solicitar proposta corporativa
-          </a>
+          </ShinyLink>
         </div>
       </section>
     </>

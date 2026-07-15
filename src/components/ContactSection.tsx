@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { ShinyButton } from "./ui/shiny-button";
 
 type Status = "idle" | "sending" | "success" | "error";
 
@@ -141,13 +142,13 @@ export function ContactSection() {
               </div>
             </div>
 
-            <button
+            <ShinyButton
               type="submit"
               disabled={status === "sending"}
-              className="mt-6 w-full rounded-full bg-amber-500 px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:scale-[1.01] hover:bg-amber-400 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
+              className="mt-6 w-full px-7 py-3.5 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
             >
               {status === "sending" ? "Enviando..." : "Enviar mensagem"}
-            </button>
+            </ShinyButton>
 
             {status === "success" && (
               <p className="mt-4 text-sm font-medium text-emerald-600">
