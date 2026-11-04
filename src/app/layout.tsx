@@ -60,6 +60,7 @@ export const metadata: Metadata = {
 const localBusinessJsonLd = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
+  logo: "https://www.foxagencia.com.br/images/fox-logo-escura.png",
   name: SITE.name,
   foundingDate: String(SITE.foundingYear),
   url: SITE.url,

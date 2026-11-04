@@ -45,7 +45,6 @@ export const FLEET: Vehicle[] = [
       "Bagageiro amplo",
     ],
     images: [
-      "/images/frota/w9-32-02.jpg",
       "/images/frota/w9-32-interno.jpg",
     ],
   },

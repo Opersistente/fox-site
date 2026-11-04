@@ -4,7 +4,7 @@ date: "2026-03-10"
 category: "Turismo escolar"
 excerpt: "Um checklist prático para coordenadores escolares avaliarem segurança, documentação e seguro antes de contratar uma excursão."
 keywords: ["turismo escolar Blumenau", "excursão escolar", "viagem de estudos"]
-cover: "/images/frota/w9-32-02.jpg"
+cover: "/images/frota/w8-28-02.jpg"
 ---
 
 Viagens escolares exigem um nível de cuidado diferente de qualquer outra excursão: são crianças e adolescentes sob a responsabilidade da escola durante todo o trajeto. Este checklist ajuda coordenadores e diretores a avaliar fornecedores de transporte com mais segurança.
