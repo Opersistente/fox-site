@@ -31,7 +31,7 @@ Nada gera mais estresse em uma excursão do que passageiros perdidos na hora do 
 
 ## 6. Pense na acessibilidade do grupo
 
-Se houver idosos, gestantes ou pessoas com mobilidade reduzida no grupo, avalie veículos com elevador de acessibilidade — como o Volare W9 da nossa frota.
+Se houver idosos, gestantes ou pessoas com mobilidade reduzida no grupo, conte isso no pedido de orçamento para planejar juntos o embarque, as paradas e a escolha dos assentos.
 
 ## 7. Tenha um contato de emergência centralizado
 

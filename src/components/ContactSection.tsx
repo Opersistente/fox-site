@@ -20,7 +20,7 @@ const CONTACT_INFO = [
   },
   {
     label: "Horário de funcionamento",
-    lines: ["Segunda a Sexta: 8h às 18h", "Sábado: 9h às 13h"],
+    lines: ["Todos os dias: 7h às 22h"],
   },
 ];
 

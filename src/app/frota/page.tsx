@@ -43,6 +43,7 @@ function VehicleGalleryDialog({
           ))}
         </div>
 
+        {vehicle.seatMap && (
         <div className="mt-4 flex flex-col gap-4 rounded-xl border border-navy-900/10 bg-sand-50 p-4 sm:flex-row sm:items-center">
           <div className="relative h-28 w-24 shrink-0 overflow-hidden rounded-md border border-navy-900/10 bg-white">
             <Image src={vehicle.seatMap} alt={`Mapa de poltronas ${vehicle.name}`} fill className="object-contain" />
@@ -63,6 +64,7 @@ function VehicleGalleryDialog({
             Baixar mapa
           </a>
         </div>
+        )}
 
         <a
           href={whatsappHref}

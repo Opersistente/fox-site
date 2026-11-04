@@ -6,7 +6,7 @@ export type Vehicle = {
   tagline: string;
   features: string[];
   images: string[];
-  seatMap: string;
+  seatMap?: string;
 };
 
 export const FLEET: Vehicle[] = [
@@ -34,23 +34,20 @@ export const FLEET: Vehicle[] = [
     seatMap: "/images/frota/mapa-executivo-46.png",
   },
   {
-    id: "w9-elevador-32",
-    name: "Volare W9 com Elevador",
+    id: "w9-32",
+    name: "Volare W9 32 lugares",
     seats: 32,
-    seatsLabel: "32 lugares · acessível",
-    tagline: "Plataforma elevatória para acessibilidade total",
+    seatsLabel: "32 lugares",
+    tagline: "Mais lugares com a agilidade de um micro-ônibus",
     features: [
-      "Elevador de acessibilidade",
       "Ar-condicionado",
-      "Ideal para turismo escolar inclusivo",
+      "Ideal para turismo escolar",
       "Bagageiro amplo",
     ],
     images: [
-      "/images/frota/w9-elevador-32-01.jpg",
-      "/images/frota/w9-elevador-32-02.jpg",
-      "/images/frota/w9-elevador-32-interno.jpg",
+      "/images/frota/w9-32-02.jpg",
+      "/images/frota/w9-32-interno.jpg",
     ],
-    seatMap: "/images/frota/mapa-w9-elevador-32.png",
   },
   {
     id: "senior-28",
