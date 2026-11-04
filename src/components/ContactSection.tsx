@@ -11,8 +11,8 @@ const CONTACT_INFO = [
     lines: ["Rua Butantã, 295, Sala 01 – Velha", "Blumenau – SC, CEP 89040-430"],
   },
   {
-    label: "Telefones",
-    lines: ["(47) 99956-0826", "(47) 3041-7726"],
+    label: "Telefone",
+    lines: ["(47) 99956-0826"],
   },
   {
     label: "E-mail",

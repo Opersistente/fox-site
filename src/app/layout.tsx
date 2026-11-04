@@ -70,10 +70,12 @@ const localBusinessJsonLd = {
     streetAddress: "Rua Butantã, 295, Sala 01 – Velha",
     addressLocality: SITE.city,
     addressRegion: SITE.state,
+    postalCode: "89040-430",
     addressCountry: "BR",
   },
   areaServed: "BR",
   priceRange: "$$",
+  sameAs: ["https://www.instagram.com/fox.viagem/", "https://www.facebook.com/fox.viagemm/"],
 };
 
 export default function RootLayout({
