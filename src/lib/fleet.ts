@@ -35,16 +35,19 @@ export const FLEET: Vehicle[] = [
   },
   {
     id: "w9-32",
-    name: "Volare W9 32 lugares",
+    name: "Volare W9 com Elevador",
     seats: 32,
-    seatsLabel: "32 lugares",
-    tagline: "Mais lugares com a agilidade de um micro-ônibus",
+    seatsLabel: "32 lugares · acessível",
+    tagline: "Plataforma elevatória para acessibilidade",
     features: [
+      "Elevador de acessibilidade",
       "Ar-condicionado",
-      "Ideal para turismo escolar",
+      "Ideal para turismo escolar inclusivo",
       "Bagageiro amplo",
     ],
     images: [
+      "/images/frota/w9-32-01.jpg",
+      "/images/frota/w9-32-02.jpg",
       "/images/frota/w9-32-interno.jpg",
     ],
   },

@@ -19,7 +19,7 @@ Para grupos pequenos (até 4 a 8 pessoas) e trajetos pontuais dentro de uma cida
 - **Coordenação única**: todo o grupo viaja junto, no mesmo horário, com o mesmo motorista — sem risco de alguém se perder ou chegar atrasado.
 - **Roteiros com múltiplas paradas**: excursões com paradas programadas (pontos turísticos, refeições, hotéis) funcionam muito melhor com um único veículo dedicado ao grupo.
 - **Viagens de mais de um dia**: fretamento permite negociar diretamente hospedagem do motorista, pedágios e o roteiro completo — algo inviável com corridas avulsas.
-- **Grupos com necessidades específicas**: bagagem volumosa ou equipamentos (como material escolar ou de eventos) são mais bem atendidos por um veículo dedicado.
+- **Grupos com necessidades específicas**: acessibilidade, bagagem volumosa ou equipamentos (como material escolar ou de eventos) são mais bem atendidos por um veículo dedicado.
 
 ## Como decidir
 
