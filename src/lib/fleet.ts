@@ -48,7 +48,6 @@ export const FLEET: Vehicle[] = [
     images: [
       "/images/frota/w9-32-01.jpg",
       "/images/frota/w9-32-03.jpg",
-      "/images/frota/w9-32-interno.jpg",
     ],
   },
   {
